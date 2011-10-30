@@ -1,0 +1,18 @@
+
+
+use this to overload << and >>
+
+friend ostream &operator<<(ostream &out, Complex c)     //output
+{
+        out<<"real part: "<<real<<"\n";
+        out<<"imag part: "<<imag<<"\n";
+        return out;
+}
+friend istream &operator>>(istream &in, Complex &c)     //input
+{
+        cout<<"enter real part:\n";
+        in>>c.real;
+        cout<<"enter imag part: \n";
+        in>>c.imag;
+        return in;
+}
